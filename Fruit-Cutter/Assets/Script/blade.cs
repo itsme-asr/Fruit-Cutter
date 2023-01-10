@@ -10,10 +10,13 @@ public class blade : MonoBehaviour
     [SerializeField] private GameObject bladePreFab;
     GameObject currentTrail;
 
+    CircleCollider2D col;
+
     private void Start()
     {
         cam = Camera.main;
         rgb = GetComponent<Rigidbody2D>();
+        col = GetComponent<CircleCollider2D>();
     }
 
     void Update()
@@ -44,6 +47,7 @@ public class blade : MonoBehaviour
     {
         isCutting = true;
         currentTrail = Instantiate(bladePreFab, transform);
+        col.enabled = true;
 
     }
 
@@ -52,6 +56,7 @@ public class blade : MonoBehaviour
         isCutting = false;
         currentTrail.transform.SetParent(null);
         Destroy(currentTrail, 3f);
+        col.enabled = false;
 
     }
 }
