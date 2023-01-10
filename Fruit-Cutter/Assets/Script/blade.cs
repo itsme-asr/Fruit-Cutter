@@ -4,12 +4,19 @@ using UnityEngine;
 
 public class blade : MonoBehaviour
 {
+    [SerializeField] private GameObject bladePreFab;
+    [SerializeField] private float miniCutVel = .001f;
+
+
+
     bool isCutting = false;
+    Vector2 prePosition;
+
+
+
     Rigidbody2D rgb;
     Camera cam;
-    [SerializeField] private GameObject bladePreFab;
     GameObject currentTrail;
-
     CircleCollider2D col;
 
     private void Start()
@@ -39,7 +46,21 @@ public class blade : MonoBehaviour
 
     private void updateCut()
     {
-        rgb.position = cam.ScreenToWorldPoint(Input.mousePosition);
+        Vector2 newPosition = cam.ScreenToWorldPoint(Input.mousePosition);
+
+        rgb.position = newPosition;
+        float veclocity = (newPosition - prePosition).magnitude * Time.deltaTime;
+        if (veclocity > miniCutVel)
+        {
+            col.enabled = true;
+
+        }
+        else
+        {
+            col.enabled = false;
+        }
+
+        prePosition = newPosition;
 
     }
 
@@ -47,7 +68,8 @@ public class blade : MonoBehaviour
     {
         isCutting = true;
         currentTrail = Instantiate(bladePreFab, transform);
-        col.enabled = true;
+        prePosition = cam.ScreenToWorldPoint(Input.mousePosition);
+        col.enabled = false;
 
     }
 
