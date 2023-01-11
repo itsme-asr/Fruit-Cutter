@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6525413041465024966}
   - component: {fileID: 8150709230460112797}
   m_Layer: 0
-  m_Name: Slice Melon
+  m_Name: Slice 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27,13 +27,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3071763054667392222}
-  m_LocalRotation: {x: 0.5, y: 0.5, z: -0.5, w: -0.49999997}
-  m_LocalPosition: {x: -0.385, y: -0.00000009783774, z: -0.000000002849372}
+  m_LocalRotation: {x: 0.45021036, y: 0.545262, z: -0.545262, w: -0.45021036}
+  m_LocalPosition: {x: -0.38648754, y: 0.015573316, z: 0.0000000023283064}
   m_LocalScale: {x: 1.5, y: 1.5, z: 2}
   m_Children: []
   m_Father: {fileID: 5363395489614290825}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 10.909, y: -90, z: 90}
 --- !u!33 &4808469406502387025
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -162,7 +162,7 @@ GameObject:
   - component: {fileID: 8589839810947104093}
   - component: {fileID: 4297058013303906889}
   m_Layer: 0
-  m_Name: Slice Melon.001
+  m_Name: Slice 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -175,13 +175,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5420727965514965415}
-  m_LocalRotation: {x: 0.5, y: 0.5, z: -0.5, w: -0.49999997}
-  m_LocalPosition: {x: 0.358, y: -0.00000005882042, z: -0.000000002849372}
+  m_LocalRotation: {x: 0.459968, y: 0.5370562, z: -0.5399827, w: -0.45652917}
+  m_LocalPosition: {x: 0.253, y: -0.013169279, z: -0.0000000011641532}
   m_LocalScale: {x: 1.5, y: 1.5, z: 2}
   m_Children: []
   m_Father: {fileID: 5363395489614290825}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 9.208, y: -90, z: 90.366}
 --- !u!33 &69238540397337513
 MeshFilter:
   m_ObjectHideFlags: 0

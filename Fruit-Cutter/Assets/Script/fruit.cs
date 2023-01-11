@@ -9,7 +9,7 @@ public class fruit : MonoBehaviour
     {
         if (col.tag == "Blade")
         {
-            Instantiate(fruitSlicedPreFab);
+            Instantiate(fruitSlicedPreFab, transform.position, transform.rotation);
             Destroy(gameObject);
 
         }
