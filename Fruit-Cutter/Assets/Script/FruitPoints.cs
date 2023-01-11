@@ -5,19 +5,21 @@ using UnityEngine.UI;
 
 public class FruitPoints : MonoBehaviour
 {
-    [SerializeField] private Text scoreText;
-    private int scorePoints;
-    private void OnTriggerEnter(Collider col)
+    //[SerializeField] private Text scoreText;
+    private int scorePoints = 0;
+    public int ScorePoints
     {
-        if (col.tag == "Fruit")
+        get { return scorePoints; }
+        set
         {
-            scorePoints++;
-            scoreText.text = "P O I N T : " + scorePoints;
+            scorePoints = value;
+            GetComponent<Text>().text = "P O I N T : " + scorePoints;
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D other)
+    void Start()
     {
-
+        ScorePoints = 0;
     }
+
 }

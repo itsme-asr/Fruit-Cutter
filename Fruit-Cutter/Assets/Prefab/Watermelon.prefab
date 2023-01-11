@@ -83,9 +83,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49ad0c184de51754daacabd225467fd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  harmFul: 0
   fruitSlicedPreFab: {fileID: 4694241082137118003, guid: e173db43c35c4444cb0aa0f71c0ca87f, type: 3}
   startForce: 15
-  scoreText: {fileID: 4162139954892263815, guid: e6e7141330b64b84d9e597c987ef7a43, type: 3}
 --- !u!1 &7974832039103459139
 GameObject:
   m_ObjectHideFlags: 0

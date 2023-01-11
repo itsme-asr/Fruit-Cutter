@@ -4,10 +4,11 @@ using UnityEngine;
 using UnityEngine.UI;
 public class fruit : MonoBehaviour
 {
+    public bool harmFul = true;
     [SerializeField] private GameObject fruitSlicedPreFab;
     [SerializeField] private float startForce = 15f;
-    //[SerializeField] public Text scoreText;
-    //private int scorePoints = 0;
+    // [SerializeField] public Text scoreText;
+    // public int scorePoints = 0;
     Rigidbody2D rb;
 
     private void Start()
@@ -19,24 +20,19 @@ public class fruit : MonoBehaviour
     {
         if (col.tag == "Blade")
         {
-            //scorePoints++;
-            //scoreText.text = "P O I N T : " + scorePoints;
+            if (!harmFul)
+            {
+                GameObject.Find("Text").transform.GetComponent<FruitPoints>().ScorePoints += 1;
+            }
+
             Vector3 direction = (col.transform.position - transform.position).normalized;
             Quaternion rotation = Quaternion.LookRotation(direction);
             GameObject sliceFruit = Instantiate(fruitSlicedPreFab, transform.position, rotation);
-
 
             Destroy(gameObject);
             Destroy(sliceFruit, 5f);
         }
     }
 
-    // private void OnCollisionEnter(Collision col)
-    // {
-    //     if (col.gameObject.CompareTag("Blade"))
-    //     {
 
-
-    //     }
-    // }
 }
