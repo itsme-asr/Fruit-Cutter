@@ -5,7 +5,7 @@ using UnityEngine;
 public class LifeCounter : MonoBehaviour
 {
     [Header("Gameplay")]
-    [SerializeField] private int numberOfLives;
+    [SerializeField] private int numberOfLives = 5;
 
     [Header("Visuals")]
     [SerializeField] private GameObject lifePrefab;
