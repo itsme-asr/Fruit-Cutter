@@ -172,6 +172,11 @@ MonoBehaviour:
   - {fileID: 2481598538624744441, guid: 70edba55fca57114ab57322b30fa17eb, type: 3}
   - {fileID: 7399689170004589430, guid: 5f65c2af46eaeb449a0399662f08dbba, type: 3}
   - {fileID: 2521696428209606655, guid: 2e7f74f769a723f46b98ef5189193725, type: 3}
+  - {fileID: 7399689170004589430, guid: 5f65c2af46eaeb449a0399662f08dbba, type: 3}
+  - {fileID: 8402961988197382849, guid: c6b4b2bb49465ef4c82073bde2dc7677, type: 3}
+  - {fileID: 2481598538624744441, guid: 70edba55fca57114ab57322b30fa17eb, type: 3}
+  - {fileID: 8402961988197382849, guid: c6b4b2bb49465ef4c82073bde2dc7677, type: 3}
+  - {fileID: 2481598538624744441, guid: 70edba55fca57114ab57322b30fa17eb, type: 3}
   spawnPoints:
   - {fileID: 1425178094}
   - {fileID: 904218123}
@@ -250,7 +255,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1469e72d668be0f418f2e7ecb8d169c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numberOfLives: 3
+  numberOfLives: 5
   lifePrefab: {fileID: 7675163702596632783, guid: 9b46da3f75e592b4da80db844c8d81aa, type: 3}
   gameOverGrp: {fileID: 0}
 --- !u!1 &705507993
