@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class fruitSpawner : MonoBehaviour
 {
-    [SerializeField] private GameObject fruitPrefab;
+    [SerializeField] private GameObject[] fruitPrefab;
     [SerializeField] private Transform[] spawnPoints;
     private float miniDelay = .1f;
     private float maxDelay = 1f;
@@ -18,10 +18,11 @@ public class fruitSpawner : MonoBehaviour
         while (true)
         {
             float deplay = Random.Range(miniDelay, maxDelay);
+            int randomFruit = Random.Range(0, fruitPrefab.Length);
             yield return new WaitForSeconds(deplay);
             int spawnIndex = Random.Range(0, spawnPoints.Length);
             Transform spawnPoint = spawnPoints[spawnIndex];
-            GameObject spawnFruit = Instantiate(fruitPrefab, spawnPoint.position, spawnPoint.rotation);
+            GameObject spawnFruit = Instantiate(fruitPrefab[randomFruit], spawnPoint.position, spawnPoint.rotation);
             Destroy(spawnFruit, 5f);
         }
 
