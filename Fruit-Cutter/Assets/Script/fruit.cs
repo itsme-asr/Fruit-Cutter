@@ -27,6 +27,7 @@ public class fruit : MonoBehaviour
 
             else
             {
+                GameObject.Find("Lives").transform.GetComponent<LifeCounter>().LoseLife();
 
             }
 
