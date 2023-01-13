@@ -8,6 +8,7 @@ public class fruitSpawner : MonoBehaviour
     //[SerializeField] private GameObject bombPrefab;
     //[SerializeField] private Transform[] bombPoints;
     [SerializeField] private Transform[] spawnPoints;
+
     private float miniDelay = .1f;
     private float maxDelay = 1f;
 

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2481598538624744437}
   m_Layer: 0
   m_Name: Banana
-  m_TagString: Untagged
+  m_TagString: Fruit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -96,6 +96,7 @@ MonoBehaviour:
   harmFul: 0
   fruitSlicedPreFab: {fileID: 1614548211038922229, guid: f288b658762001146872905da407b549, type: 3}
   startForce: 15
+  slice: {fileID: 6113759377349148761, guid: 5de96fb8910fc244a83dd0b84325d84a, type: 3}
 --- !u!1 &3364471945065760661
 GameObject:
   m_ObjectHideFlags: 0

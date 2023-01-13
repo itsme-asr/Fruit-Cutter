@@ -5,21 +5,23 @@ using UnityEngine.UI;
 
 public class FruitPoints : MonoBehaviour
 {
-
+    [SerializeField] private AudioSource slice;
     private int scorePoints;
     public int ScorePoints
     {
-        get { return scorePoints; }
+        get
+        {
+
+            return scorePoints;
+        }
         set
         {
-            scorePoints = value;
             GetComponent<Text>().text = "P O I N T : " + scorePoints;
         }
     }
-
     void Start()
     {
+
         ScorePoints = 74;
     }
-
 }

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8402961988197382910}
   m_Layer: 0
   m_Name: Apple
-  m_TagString: Untagged
+  m_TagString: Fruit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -86,6 +86,7 @@ MonoBehaviour:
   harmFul: 0
   fruitSlicedPreFab: {fileID: 5332928565387437342, guid: 32eb2f9ef8269b84d99ab03552db6206, type: 3}
   startForce: 15
+  slice: {fileID: 6113759377349148761, guid: 5de96fb8910fc244a83dd0b84325d84a, type: 3}
 --- !u!1001 &8402961987414576746
 PrefabInstance:
   m_ObjectHideFlags: 0
