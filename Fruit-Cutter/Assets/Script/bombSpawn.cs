@@ -5,10 +5,11 @@ using UnityEngine;
 public class bombSpawn : MonoBehaviour
 {
     [SerializeField] private GameObject bombPrefab;
-    [SerializeField] private float bombDelay = 5f;
+    [SerializeField] private float bombDelay;
     [SerializeField] private Transform[] spawnPoints;
     void Start()
     {
+        bombDelay = 5f;
         StartCoroutine(spawnBomb());
     }
 
@@ -21,22 +22,26 @@ public class bombSpawn : MonoBehaviour
             int spawnIndex = Random.Range(0, spawnPoints.Length);
             Transform spawnPoint = spawnPoints[spawnIndex];
             GameObject bombTime = Instantiate(bombPrefab, spawnPoint.position, spawnPoint.rotation);
+
             Debug.Log(bombDelay);
             Debug.Log(GameObject.Find("Text").transform.GetComponent<FruitPoints>().ScorePoints);
-            if (GameObject.Find("Text").transform.GetComponent<FruitPoints>().ScorePoints == 75)
-            {
-                bombDelay = bombDelay - .1f;
-                Debug.Log(bombDelay);
-            }
 
-            // else if (
-            //     GameObject.Find("Text").transform.GetComponent<FruitPoints>().ScorePoints == 150)
-            // {
-            //     bombDelay = bombDelay - .1f;
-            //     Debug.Log(bombDelay);
-            // }
+            int score = GameObject.Find("Text").transform.GetComponent<FruitPoints>().ScorePoints;
+            Debug.Log(score);
+
+            delayBomb(score);
+
             Destroy(bombTime, 5f);
         }
 
+    }
+
+    private void delayBomb(int score)
+    {
+        if (score == 75)
+        {
+            bombDelay = bombDelay - .1f;
+            Debug.Log(bombDelay);
+        }
     }
 }

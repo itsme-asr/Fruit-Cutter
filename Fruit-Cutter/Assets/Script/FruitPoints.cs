@@ -19,7 +19,7 @@ public class FruitPoints : MonoBehaviour
 
     void Start()
     {
-        ScorePoints = 65;
+        ScorePoints = 74;
     }
 
 }
