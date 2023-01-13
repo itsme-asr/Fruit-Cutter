@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class FruitPoints : MonoBehaviour
 {
-    //[SerializeField] private Text scoreText;
-    private int scorePoints = 0;
+
+    private int scorePoints;
     public int ScorePoints
     {
         get { return scorePoints; }
@@ -19,7 +19,7 @@ public class FruitPoints : MonoBehaviour
 
     void Start()
     {
-        ScorePoints = 0;
+        ScorePoints = 65;
     }
 
 }
