@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class LifeCounter : MonoBehaviour
 {
     [Header("Gameplay")]
@@ -28,8 +28,12 @@ public class LifeCounter : MonoBehaviour
         numberOfLives--;
         GameObject lastlife = lives[lives.Count - 1];
         lives.Remove(lastlife);
-
         Destroy(lastlife);
+
+        if (lives.Count == 0)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
     }
 }
 

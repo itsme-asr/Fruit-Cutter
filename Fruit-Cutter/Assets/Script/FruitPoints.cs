@@ -14,6 +14,7 @@ public class FruitPoints : MonoBehaviour
         {
             scorePoints = value;
             GetComponent<Text>().text = "P O I N T : " + scorePoints;
+            PlayerPrefs.SetInt("highscore", scorePoints);
         }
     }
     void Start()
