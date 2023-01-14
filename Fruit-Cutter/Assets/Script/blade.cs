@@ -6,13 +6,8 @@ public class blade : MonoBehaviour
 {
     [SerializeField] private GameObject bladePreFab;
     [SerializeField] private float miniCutVel = .001f;
-
-
-
     bool isCutting = false;
     Vector2 prePosition;
-
-
 
     Rigidbody2D rgb;
     Camera cam;
