@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class Menu : MonoBehaviour
 {
+    [SerializeField] private bool pause = false;
     public void exitGame()
     {
         Debug.Log("Namaste World");
@@ -26,4 +27,31 @@ public class Menu : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
 
     }
+
+    public void pauseGame()
+    {
+        if (pause) // if true then play
+        {
+            Time.timeScale = 1;
+            pause = false;
+        }
+        else // pause the game
+        {
+            Time.timeScale = 0;
+        }
+    }
+
+    public void resumeGame()
+    {
+        if (pause) // if pause 
+        {
+            Time.timeScale = 0;
+            pause = true;
+        }
+        else
+        {
+            Time.timeScale = 1;
+        }
+    }
+
 }

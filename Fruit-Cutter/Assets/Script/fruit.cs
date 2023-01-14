@@ -22,7 +22,7 @@ public class fruit : MonoBehaviour
 
             if (!harmFul)
             {
-                GameObject.Find("Text").transform.GetComponent<FruitPoints>().ScorePoints += 1;
+                GameObject.Find("Point").transform.GetComponent<FruitPoints>().ScorePoints += 1;
             }
 
             else
