@@ -28,6 +28,11 @@ public class Menu : MonoBehaviour
 
     }
 
+    public void reLoadLevel()
+    {
+        SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
+    }
+
     public void pauseGame()
     {
         if (pause) // if true then play
